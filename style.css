@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.score, .high-score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
+
+#game-board {
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#pause-btn {
+    background-color: #ff9800;
+}
+
+#pause-btn:hover {
+    background-color: #e68a00;
+}
+
+#restart-btn {
+    background-color: #f44336;
+}
+
+#restart-btn:hover {
+    background-color: #d32f2f;
+}
+
+.game-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f44336;
+    min-height: 24px;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .game-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #game-board {
+        width: 100%;
+        height: auto;
+    }
+
+    .controls {
+        flex-wrap: wrap;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* 方向键控制区 - 移动设备 */
+.arrow-keys {
+    display: none;
+    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .arrow-keys {
+        display: block;
+    }
+
+    .arrow-row {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .arrow-btn {
+        width: 60px;
+        height: 60px;
+        margin: 0 5px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
